@@ -1,0 +1,112 @@
+.navbar {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(5, 159, 136);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5 2.5rem;
+    color: azure;
+    border-bottom: 3px solid #000;
+}
+
+.nav__logo {
+    color: azure;
+}
+
+.navbar__toggle {
+    display: none;
+}
+
+ul.nav__menu {
+    display: flex;
+}
+
+li.nav__item {
+    margin: 0 1rem;
+    padding: 0 1rem;
+}
+
+.nav__link {
+    color: azure;
+    font-size: 1.2rem;
+    padding: .2rem 0;
+}
+
+.nav__link:hover {
+    border-bottom: 3px solid rgb(2, 47, 110);
+    color: azure;
+}
+
+.activated {
+    padding: .5rem 1rem;
+    background-color: rgb(2, 47, 110);
+    color: azure;
+}
+.activated:hover {
+    border: none;
+}
+
+/* Medium Screen Media Queries */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 0 2rem;
+    }
+    .navbar__toggle {
+        display: block;
+        font-size: 1.5rem;
+        color: azure;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+    }
+    ul.nav__menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top:4.3rem;
+        left: 100%;
+        opacity: 1;
+        margin: 0;
+        padding: .5rem 0 0.5rem;
+        transition: all 0.5s ease-in-out;
+    }
+
+    ul.nav__menu.active {
+        background-color: rgb(5, 159, 136);
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+        border-bottom: 3px solid #000;
+    }
+    .nav__item {
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+    .nav__link {
+        display: block;
+        padding: .5rem 1rem;
+        margin: .5rem 0;
+        font-size: 1.2rem;
+        transition: all .5s ease;
+        width: 5rem;
+    }
+    .nav__link:hover {
+        border: none;
+        font-size: 1.3rem;
+        background-color: #000;
+    }
+    .nav__logo {
+        font-size: 1.2rem;
+        display: inline-block;
+        padding: .5rem;
+    }
+    .activated {
+        background: none;
+    }
+    .activated:hover {
+        border: none;
+    }
+}

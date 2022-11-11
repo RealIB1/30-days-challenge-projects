@@ -1,6 +1,4 @@
 import { Component } from 'react'
-// import '/src/assets/css/Projects.css'
-
 
 class Counter extends Component {
   state = {
@@ -34,14 +32,38 @@ class Counter extends Component {
   }
 }
 
+// class ColorGenerator extends Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = {
+
+//     }
+//   }
+
+//   render() {
+//     const colorGen = []
+//     return (
+//       <div className='color__generator'>
+//         <h1>Color Generator</h1>
+
+//       </div>
+//     )
+//   }
+// }
+
 
 class Projects extends Component {
   render() {
     return (
+      <>
       <div className="projects">
         <h1 className='header'>Projects Built With React</h1>
-        <Counter />
+        <div className='main__projects'>
+          <Counter />
+          {/* <ColorGenerator /> */}
+        </div>
       </div>
+      </>
     )
   }
 }

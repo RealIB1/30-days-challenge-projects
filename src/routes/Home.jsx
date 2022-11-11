@@ -1,14 +1,14 @@
 import { Component } from "react";
-// import '/src/assets/css/Base.css'
 import image from '/src/assets/images/asabenah.jpeg'
 
+
 const UserCard = ({
-  user: { firstName, lastName, image}
+  user: { firstName, lastName, image }
 }) => {
   return (
     <div className="card">
       <img src={image} alt={firstName} className="card-img" />
-      <h2 className="user-detail"> { firstName} { lastName }</h2>
+      <h2 className="user-detail"> {firstName} {lastName}</h2>
     </div>
 
   );
@@ -16,35 +16,35 @@ const UserCard = ({
 
 
 const Button = ({ text, onClick }) => (
- 
+
   <button className="btn btn-primary" onClick={onClick}>{text}</button>
-) 
+)
 
 class Header extends Component {
-    constructor(props) {
+  constructor(props) {
     super(props);
-   
-    }
+
+  }
 
   render() {
-  console.log(this.props.data);
+    console.log(this.props.data);
     const {
-        title,
-        subtitle,
-        description,
-        link,
-        linkText,
-        linkTarget,
-        date,
+      title,
+      subtitle,
+      description,
+      link,
+      linkText,
+      linkTarget,
+      date,
     } = this.props.data;
     return (
       <div className="header">
         <div className="header__title">
-        <h1>{ title }</h1>
-        <h2>{ subtitle }</h2>
-        <p>{ description }</p>
-        <p>{ date }</p>
-        <a href={ link } target={linkTarget}>{ linkText }</a>
+          <h1>{title}</h1>
+          <h2>{subtitle}</h2>
+          <p>{description}</p>
+          <p>{date}</p>
+          <a href={link} target={linkTarget}>{linkText}</a>
         </div>
         {/* <div className="header__author">
         <h3>{ firstName } { lastName }</h3>
@@ -60,13 +60,13 @@ class Header extends Component {
 }
 
 class Skills extends Component {
-    constructor(props) {
+  constructor(props) {
     super(props);
-    }
+  }
 
   render() {
     const { skills } = this.props
-    const skillsList = skills.map((skill, index) => <li key={ index } className='skillsList'>{ skill }</li>);
+    const skillsList = skills.map((skill, index) => <li key={index} className='skillsList'>{skill}</li>);
     return skillsList;
   }
 }
@@ -80,38 +80,33 @@ class Main extends Component {
   render() {
     return (
       <div className="container">
-        <div className="row">
-          <div className="col-sm-2"></div>
           <div className="col-sm-8">
-            <UserCard user={ this.props.user } />
+            <UserCard user={this.props.user} />
             <h2 className="skillHeader">Skills</h2>
-            <ul>
-             <Skills skills={ this.props.skills } />
+            <ul className="list-group">
+              <Skills skills={this.props.skills} />
             </ul>
             <p className="prerequisite">Prerequisite to Get Started with React.js </p>
-          <ul className="list-group">
-            <li className="list-group-item">HTML</li>
-            <li className="list-group-item">CSS</li>
-            <li className="list-group-item">JS</li>
-          </ul>
-          <div className="actionBtns">
-          <Button text='Greet' onClick={ this.props.greetMessage} />
-          <Button text='Show Time' onClick={ this.props.handleTime } />
+            <ul className="list-group">
+              <li className="list-group-item">HTML</li>
+              <li className="list-group-item">CSS</li>
+              <li className="list-group-item">JS</li>
+            </ul>
+            <div className="actionBtns">
+              <Button text='Greet' onClick={this.props.greetMessage} />
+              <Button text='Show Time' onClick={this.props.handleTime} />
+            </div>
           </div>
-          </div>
-          <div className="col-sm-2"></div>
-  
-      </div>
-      </div>
-  
-  );
+
+        </div>
+    );
   }
 
 }
 
 
-class Base extends Component {
-   
+class Home extends Component {
+
   showTime = (time) => {
     const months = [
       'January',
@@ -128,20 +123,20 @@ class Base extends Component {
       'December'
     ]
 
-  const weekdays = [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday'
-  ]
+    const weekdays = [
+      'Sunday',
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday'
+    ]
 
-    const month = months[time.getMonth()].slice(0, 3)
+    const month = months[ time.getMonth() ].slice(0, 3)
     const year = time.getFullYear()
     const day = time.getDate()
-    const days = weekdays[time.getDay()].slice(0, 3)
+    const days = weekdays[ time.getDay() ].slice(0, 3)
     const hour = time.getHours()
     const minute = time.getMinutes()
     const second = time.getSeconds()
@@ -180,19 +175,21 @@ class Base extends Component {
       location: 'Finland',
       bio: 'I am a software engineer and a teacher. I love teaching and I am passionate about building scalable software systems.',
     }
-    
-       const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node', 'MongoDB', 'Python', 'D3.js']
 
+    const skills = [ 'HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node', 'MongoDB', 'Python', 'D3.js' ]
+    
     const user = { ...data.author, image: image }
-      return (
+    return (
+      <>
       <div className="base">
-        <Header data={ data } />
-        <Main 
-        user={ user } 
-        skills={ skills }
-        greetMessage={ this.greetMessage } 
-        handleTime={ this.handleTime } />
+        <Header data={data} />
+        <Main
+          user={user}
+          skills={skills}
+          greetMessage={this.greetMessage}
+          handleTime={this.handleTime} />
       </div>
+          </>
 
 
     )
@@ -202,4 +199,4 @@ class Base extends Component {
 }
 
 
-export default  Base;
+export default Home;
