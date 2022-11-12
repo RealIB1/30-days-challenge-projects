@@ -30,6 +30,14 @@ const Counter = () => {
     )
   }
 
+// Forms with multiple input fields and useState for updating the state.
+const Form = () => {
+  const [form, setUpdates] = useState(Form);
+
+  
+
+}
+
 // class ColorGenerator extends Component {
 //   constructor(props) {
 //     super(props)

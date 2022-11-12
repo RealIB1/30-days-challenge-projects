@@ -172,8 +172,8 @@ class Home extends Component {
         lastName: 'Sulemana',
       },
       date: new Date().toDateString(),
-      image: 'https://avatars.githubusercontent.com/u/50813726?v=4',
-      location: 'Finland',
+      image: image,
+      location: 'Ghana',
       bio: 'I am a software engineer and a teacher. I love teaching and I am passionate about building scalable software systems.',
     }
 
