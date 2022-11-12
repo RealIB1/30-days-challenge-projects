@@ -1,5 +1,5 @@
 import { Component } from "react";
-import image from '/src/assets/images/asabenah.jpeg'
+import image from '/src/assets/images/profile.png'
 import { MdVerified } from "react-icons/md";
 
 
@@ -151,8 +151,8 @@ class Home extends Component {
   }
 
   instructor = {
-    firstName: 'Asabeneh',
-    lastName: 'Yetayeh',
+    firstName: 'Ibrahim',
+    lastName: 'Sulemana',
   }
 
   greetMessage = () => {
@@ -168,8 +168,8 @@ class Home extends Component {
       linkText: 'Read more on how to get started with React',
       linkTarget: '_blank',
       author: {
-        firstName: 'Asabeneh',
-        lastName: 'Yetayeh',
+        firstName: 'Ibrahim',
+        lastName: 'Sulemana',
       },
       date: new Date().toDateString(),
       image: 'https://avatars.githubusercontent.com/u/50813726?v=4',
