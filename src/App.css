@@ -1,5 +1,6 @@
 .base {
   padding: 0.5rem 1rem;
+  padding-top: 5rem;
   background-color: rgb(2, 47, 110);
   max-width: 75rem;
   margin: 0 auto;
@@ -90,6 +91,7 @@ ul {
 }
 
 .projects {
+  padding-top: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

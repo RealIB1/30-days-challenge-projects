@@ -1,0 +1,97 @@
+
+.main__projects {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    max-width: 75rem;
+    margin: 2rem 0;
+}
+.counter-title {
+    padding-top: 1rem;
+    font-size: 2.5rem;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+  
+  .counter {
+    background-image: radial-gradient(
+      circle farthest-corner at 22.4% 21.7%,
+      rgba(4, 189, 228, 1) 0%,
+      rgba(2, 83, 185, 1) 100.2%
+    );
+    /* width: 100%; */
+    text-align: center;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    /* padding: 0 1rem; */
+    margin: 1rem;
+  }
+
+  .counter h2 {
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+  
+
+  button {
+    margin: 0 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    -webkit-box-shadow: 0px 1px 13px -1px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 0px 1px 13px -1px rgba(0, 0, 0, 0.51);
+    box-shadow: 0px 1px 13px -1px rgba(0, 0, 0, 0.51);
+    cursor: pointer;
+  }
+  
+  button:active {
+    -webkit-box-shadow: 0px 1px 13px -1px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0px 1px 13px -1px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0px 1px 13px -1px rgba(0, 0, 0, 0.2) inset;
+  }
+
+  .addOne {
+    background-color: rgb(1, 94, 71);
+    border: none;
+    color: azure;
+    border-radius: 5px;
+    padding: 0.5rem 3rem;
+  }
+  
+  .addOne:hover {
+    background-color: rgb(2, 114, 86);
+  }
+  
+  .minusOne {
+    background-color: rgb(128, 4, 4);
+    padding: 0.5rem 3rem;
+    border: none;
+    color: azure;
+    border-radius: 5px;
+  }
+  
+  .minusOne:hover {
+    background-color: rgb(180, 3, 3);
+  }
+
+  .negative {
+    color: rgb(199, 4, 4);
+  }
+   
+/* Medium Screen Media Query */
+@media screen and (max-width: 768px) {
+    .main__projects {
+        flex-direction: column;
+    }
+
+    
+    
+}
+
+/* Small Screen Media Query */
+@media screen and (max-width: 480px) {
+    .main__projects {
+        flex-direction: column;
+    }
+}

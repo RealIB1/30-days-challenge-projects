@@ -27,6 +27,7 @@ a:hover {
 body {
   margin: 0;
   /* background-color: rgb(2, 47, 110); */
+  overflow-x: hidden;
 }
 
 h1 {

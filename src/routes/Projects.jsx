@@ -1,36 +1,34 @@
-import { Component } from 'react'
+import { Component, useState } from 'react'
+import './Projects.css' 
 
-class Counter extends Component {
-  state = {
-    count: 0
-  }
-
-  addOne = () => {
-    this.setState({
-      count: this.state.count + 1
-    })
-  }
-  minusOne = () => {
-    this.setState({
-      count: this.state.count - 1
-    })
-  }
-
-  render() {
-    const count = this.state.count
+const Counter = () => {
+  const [count, setCount] = useState(0);
+  const addOne = () => {
+    let value = count + 1;
+    setCount(value);
+  };
+  const minusOne = () => {
+    let value = count - 1;
+    setCount(value);
+  };
 
     return (
-      <div className='counter'>
-        <h1>Counter</h1>
-        <div className='count'>
-          <h2>{count}</h2>
-          <button onClick={this.addOne} className='addOne'> +1 </button>
-          <button onClick={this.minusOne} className='minusOne'> -1 </button>
-        </div>
+      <div className="counter">
+        <h2 className='counter-title'>Counter</h2>
+        {count < 0 ? (
+          <h2 className="negative">{count}</h2>
+        ) : (
+          <h2 className="positive">{count}</h2>
+        )}
+        <button onClick={addOne} className="addOne">
+          +1{' '}
+        </button>
+        <button onClick={minusOne} className="minusOne">
+          -1{' '}
+        </button>
       </div>
     )
   }
-}
 
 // class ColorGenerator extends Component {
 //   constructor(props) {
@@ -59,6 +57,8 @@ class Projects extends Component {
       <div className="projects">
         <h1 className='header'>Projects Built With React</h1>
         <div className='main__projects'>
+          <Counter />
+          <Counter />
           <Counter />
           {/* <ColorGenerator /> */}
         </div>
