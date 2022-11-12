@@ -2,6 +2,7 @@
   padding: 0.5rem 1rem;
   padding-top: 5rem;
   background-color: rgb(2, 47, 110);
+  background-image: linear-gradient(to bottom, rgb(2, 47, 110), rgb(119, 14, 225));
   max-width: 75rem;
   margin: 0 auto;
 }
@@ -24,6 +25,7 @@ div.card {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+    /* background-color: rgb(2, 47, 110); */
 }
 
 .verified {
@@ -45,7 +47,7 @@ img.card-img {
   align-items: center;
   padding: 2rem 0;
   margin: 2rem 0;
-  background-color: #16a3fa;
+  background-color: rgb(232, 128, 0);
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
