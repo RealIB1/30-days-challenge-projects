@@ -1,5 +1,6 @@
 import { Component } from "react";
 import image from '/src/assets/images/asabenah.jpeg'
+import { MdVerified } from "react-icons/md";
 
 
 const UserCard = ({
@@ -8,7 +9,7 @@ const UserCard = ({
   return (
     <div className="card">
       <img src={image} alt={firstName} className="card-img" />
-      <h2 className="user-detail"> {firstName} {lastName}</h2>
+      <h2 className="user-detail"> {firstName} {lastName}<MdVerified className="verified" /></h2>
     </div>
 
   );
