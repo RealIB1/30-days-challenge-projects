@@ -160,23 +160,12 @@ footer {
     /* padding: .5rem; */
 }
 
+div.projects > h1 {
+  font-size: 2rem;
+}
+
   .btn {
     font-size: 1rem;
-  }
-
-  div.projects > h1 {
-    font-size: 1.5rem;
-  }
-
-  .counter > h1 {
-    font-size: 3rem;
-  }
-  .count > button {
-    padding: 0.5rem 2rem;
-    font-size: 1rem;
-  }
-  .count > h2 {
-    font-size: 4rem;
   }
 
   footer {

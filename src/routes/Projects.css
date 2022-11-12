@@ -92,6 +92,21 @@
 
 }
 
+@media screen and (max-width: 768px) {
+
+  .counter > h1 {
+    font-size: 3rem;
+  }
+  .count > button {
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+  }
+  .count > h2 {
+    font-size: 4rem;
+  }
+  
+}
+
 /* Small Screen Media Query */
 @media screen and (max-width: 480px) {
     .main__projects {
