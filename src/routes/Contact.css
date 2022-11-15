@@ -1,3 +1,26 @@
 .contact {
     padding-top: 5rem;
+    text-align: center;
+    margin: 15rem;
+    line-height: 1.5;
+    padding: 2rem;
+    font-size: 5rem;
+}
+
+.constructor {
+    font-size: 5rem;
+}
+
+@media screen and (max-width: 768px){
+
+    .contact {
+        margin: 5rem .5rem;
+        font-size: 2rem;
+    }
+
+    .constructor {
+        font-size: 10rem;
+        margin-bottom: 5rem;
+    }
+    
 }
