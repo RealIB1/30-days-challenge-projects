@@ -3,16 +3,20 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* grid-template-rows: 1fr 1fr; */
-    gap: 2rem 4rem;
+    gap: 1rem 4rem;
     grid-template-areas: "project1 project2" "project3 project4";
-    padding: 1rem;
+    padding: 2rem;
     place-content: center;
     place-items: center;
     max-width: 75rem;
 }
+
+.project {
+  width: 100%;
+}
 .counter-title {
     padding-top: 1rem;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
   }
@@ -23,23 +27,21 @@
       rgba(4, 189, 228, 1) 0%,
       rgba(2, 83, 185, 1) 100.2%
     );
-    width: 100%;
     text-align: center;
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
     padding: 1rem;
-    margin: 1rem;
+    height: 20rem;
   }
 
-  .counter h2 {
+  .counter .positive, .negative {
    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 700;
-    margin-bottom: 2rem;
   }
   
 
   button {
-    margin: 0.5rem 1rem;
+    margin: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1rem;
     -webkit-box-shadow: 0px 1px 13px -1px rgba(0, 0, 0, 0.51);
@@ -60,6 +62,7 @@
     color: azure;
     border-radius: 5px;
     padding: 0.5rem 3rem;
+    font-size: 1.5rem;
   }
   
   .addOne:hover {
@@ -72,6 +75,7 @@
     border: none;
     color: azure;
     border-radius: 5px;
+    font-size: 1.5rem;
   }
   
   .minusOne:hover {
@@ -80,6 +84,45 @@
 
   .negative {
     color: rgb(199, 4, 4);
+  }
+
+  .color__generator {
+    cursor: pointer;
+
+  }
+
+  .colors_main {
+    padding: 1rem;
+    background-color: rgba(71, 1, 128, 0.477);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  .colors {
+    display: flex;
+  }
+
+  .colors_main h1 {
+    margin: .5rem;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+   p.hint {
+    word-wrap: wrap;
+    text-align: center;
+    font-size: .8rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  .color_code {
+    text-transform: uppercase;
+    text-align: center;
+    padding: .5rem 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .color {
+    height: 14.5rem;
   }
    
 /* Medium Screen Media Query */
@@ -104,12 +147,53 @@
   .count > h2 {
     font-size: 4rem;
   }
+
+  .counter-title {
+    font-size: 2.5rem;
+  }
+
+  .counter .positive, .negative {
+    font-size: 3.5rem;
+  }
+
+  .addOne, .minusOne {
+    font-size: 1rem;
+  }
+
+  .colors {
+    display: block;
+  }
+
+  .color__generator {
+    height: auto;
+    margin: 0;
+  }
+
+  .colors_main h1 {
+    font-size: 2rem;
+  }
+
+  .color_code {
+    width: 5rem;
+  }
+
+  .color {
+    height: inherit;
+    margin: 0;
+  }
   
 }
 
-/* Small Screen Media Query */
-@media screen and (max-width: 480px) {
-    .main__projects {
-        flex-direction: column;
-    }
+@media screen and (767px <= width <= 1130px) {
+  .main__projects {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "project1" "project2" "project3" "project4";
+}
+}
+
+/* Smaller Screens media queries */
+
+@media screen and (max-width: 768px){
+  
 }

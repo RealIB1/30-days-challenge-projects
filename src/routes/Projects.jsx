@@ -13,13 +13,16 @@ const Counter = () => {
   };
 
     return (
+      <>
+      <div>
+
       <div className="counter">
         <h2 className='counter-title'>Counter</h2>
         {count < 0 ? (
           <h2 className="negative">{count}</h2>
-        ) : (
+          ) : (
           <h2 className="positive">{count}</h2>
-        )}
+          )}
         <button onClick={addOne} className="addOne">
           +1{' '}
         </button>
@@ -27,35 +30,89 @@ const Counter = () => {
           -1{' '}
         </button>
       </div>
+          </div>
+          </>
     )
   }
 
 // Forms with multiple input fields and useState for updating the state.
 const Form = () => {
-  const [form, setUpdates] = useState(Form);
-
+  const [form, setUpdates] = useState(initialState);
   
 
+
+return (
+  <>
+  <form className="form" onSubmit={Form}>
+    <p className="typewriter-print"></p>
+    <label className="typewriter-label" htmlFor='typewriter'>Typewriter</label>
+    <textarea className="typewriter" placeholder="Type to print on the screen" rows="10"></textarea>
+  </form>
+  </>
+)
 }
 
-// class ColorGenerator extends Component {
-//   constructor(props) {
-//     super(props)
-//     this.state = {
+class ColorGenerator extends Component {
+  constructor(props) {
+    super(props)
+  }
 
-//     }
-//   }
+  render() {
+    let style = {
+      backgroundColor: this.props.hexCode
+    }
+    return (
+      <div className='color__generator'>
+<div className='color'  style={style} onClick={this.props.update.bind(this, this.props.index)} >
+<p className='color_code' >{this.props.hexCode}</p>
+</div>
+      </div>
+    )
+  }
+}
 
-//   render() {
-//     const colorGen = []
-//     return (
-//       <div className='color__generator'>
-//         <h1>Color Generator</h1>
+class ColorGenerate extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      colorCount: 6,
+      colors: []
+    }
+    for (let i = 0; i < this.state.colorCount; i+=1) {
+      this.state.colors.push({hexCode: this.generateColor()})
+    }
+  }
 
-//       </div>
-//     )
-//   }
-// }
+  generateColor() {
+    return '#' + Math.random().toString(16).substr(-6)
+  }
+
+  updateColor(index) {
+    let colors = this.state.colors.slice()
+    const currentColor = this.generateColor()
+    colors[index].hexCode = currentColor
+    this.setState({
+      colors: colors
+    })
+  }
+
+  render() {
+    return (
+
+      <>
+      <div className="colors_main">
+    <h1>Color Generator</h1>
+    <div className='colors'>
+      {this.state.colors.map((color, index) => <ColorGenerator key={`color-${index}`} index={index} update={this.updateColor.bind(this)} hexCode={color.hexCode} className="colors_gen"></ColorGenerator>)}
+    </div>
+<p className='hint'>Hint: Tap on the hexcode to generate new colors and the colors to copy to clipboard.</p>
+      </div>
+    </>
+
+)
+}
+
+}
 
 
 class Projects extends Component {
@@ -65,10 +122,17 @@ class Projects extends Component {
       <div className="projects">
         <h1 className='header'>Projects Built With React</h1>
         <div className='main__projects'>
+          <div className='project'>
           <Counter />
-          <Counter />
-          <Counter />
-          {/* <ColorGenerator /> */}
+          </div>
+
+          <div className='project'>
+          <ColorGenerate />
+          </div>
+
+          <div className='project'>
+            {/* <Form/> */}
+          </div>
         </div>
       </div>
       </>
