@@ -1,4 +1,5 @@
 .contact {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding-top: 5rem;
     text-align: center;
     margin: 15rem;
@@ -15,12 +16,12 @@
 
     .contact {
         margin: 5rem .5rem;
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .constructor {
         font-size: 10rem;
-        margin-bottom: 5rem;
+        margin: 5rem auto;
     }
     
 }
