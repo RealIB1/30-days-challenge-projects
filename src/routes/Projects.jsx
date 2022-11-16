@@ -53,7 +53,7 @@ const Form = () => {
         <textarea className="typewriter"
           type='text'
           value={form}
-          onChange={handleChange} placeholder="Type to print on the screen" rows="10"></textarea>
+          onChange={handleChange} placeholder="Start type to print to the screen..." rows="10"></textarea>
       </div>
     </>
   )
