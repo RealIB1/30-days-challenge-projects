@@ -5,6 +5,7 @@
   background-image: linear-gradient(to bottom, rgb(2, 47, 110), rgb(86, 3, 170));
   max-width: 75rem;
   margin: 0 auto;
+  color: #fff;
 }
 
 .base a {
