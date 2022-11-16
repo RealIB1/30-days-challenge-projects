@@ -13,6 +13,7 @@
 
 .project {
   width: 100%;
+  border-radius: 5px;
 }
 .counter-title {
     padding-top: 1rem;
