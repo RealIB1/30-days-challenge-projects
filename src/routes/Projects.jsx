@@ -1,8 +1,9 @@
 import { Component, useState } from 'react'
+import useFetch from '../components/useFetch'
 import './Projects.css'
 
 const Counter = () => {
-  const [ count, setCount ] = useState(0);
+  const [count, setCount] = useState(0);
   const addOne = () => {
     let value = count + 1;
     setCount(value);
@@ -37,7 +38,7 @@ const Counter = () => {
 
 // Forms with multiple input fields and useState for updating the state.
 const Form = () => {
-  const [ form, setUpdates ] = useState('');
+  const [form, setUpdates] = useState('');
   const handleChange = (e) => {
     const value = e.target.value
     setUpdates(value)
@@ -59,6 +60,69 @@ const Form = () => {
   )
 }
 
+
+// Random Country Generator using Rest Countries Api 
+const Country = (
+  { country: {
+    flag,
+    name,
+    capital,
+    region,
+    // continent: continent,
+    population,
+    // language,
+    // timezones,
+    alpha2Code,
+    alpha3Code,
+    callingCodes,
+    // currencies,
+  } }) => {
+
+  return (
+    <>
+      <div className="countries">
+        <img className="country flag" src={flag} alt={name} />
+        <h2 className="country title">{name} <br /><span>({name})</span></h2>
+        <h3 className="country capital">Capital: {capital}</h3>
+        <h3 className="country region">Region: {region}</h3>
+        {/* <h3 className="country continent">Continent: {continent}</h3> */}
+        <p className="country population">Population: {population}</p>
+        {/* <p className="country language">Language: {language.languages[name]}</p> */}
+        {/* <p className="country timezone">Timezone: {timezones}</p> */}
+        <p className="country countryCode">Country Code: {alpha2Code}</p>
+        <p className="country countryCode">Country Code: {alpha3Code}</p>
+        <p className="country dialCode">Dial Code: {callingCodes}</p>
+        {/* <p className="country currency">Currency: {currencies.map((code) => {<span key={code} code={code}></span>})}</p> */}
+
+      </div>
+    </>
+  )
+
+}
+const CountryGenerator = () => {
+  const url = 'https://restcountries.com/v2/all'
+  const data = useFetch(url)
+  const handleClick = () => {
+    setCountry(data[Math.floor(Math.random() * data.length)])
+  }
+
+  return (
+    <>
+      <div className="country-wrapper">
+        <h2 className="country-generator-title">Country Generator</h2>
+        <div className="country-generator">
+          {data.map((country) => {
+            return <Country key={country.name} country={country} />
+          })}
+        </div>
+        <button className="country-generator-button" onClick={handleClick}>Generate Country</button>
+      </div>
+    </>
+  )
+
+}
+
+// Random Quote Generator using  JavaScript
 class ColorGenerator extends Component {
   constructor(props) {
     super(props)
@@ -97,7 +161,7 @@ class ColorGenerate extends Component {
   updateColor(index) {
     let colors = this.state.colors.slice()
     const currentColor = this.generateColor()
-    colors[ index ].hexCode = currentColor
+    colors[index].hexCode = currentColor
     this.setState({
       colors: colors
     })
@@ -112,7 +176,7 @@ class ColorGenerate extends Component {
           <div className='colors'>
             {this.state.colors.map((color, index) => <ColorGenerator key={`color-${index}`} index={index} update={this.updateColor.bind(this)} hexCode={color.hexCode} className="colors_gen"></ColorGenerator>)}
           </div>
-          <p className='hint'>Hint: Tap on the hexcode to generate new colors and the colors to copy to clipboard.</p>
+          <p className='hint'>Hint: Tap on the hex code to generate new colors and the colors to copy to clipboard.</p>
         </div>
       </>
 
@@ -139,6 +203,9 @@ class Projects extends Component {
 
             <div className='project'>
               <Form />
+            </div>
+            <div className='project'>
+              <CountryGenerator />
             </div>
           </div>
         </div>

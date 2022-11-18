@@ -1,9 +1,10 @@
-import React, { Component, Fragment, useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import { FaTimes, FaBars } from 'react-icons/fa'
 import Home from '/src/routes/Home'
 import About from '/src/routes/About'
 import Projects from '/src/routes/Projects'
 import Contact from '/src/routes/Contact'
+import ErrorPage from '../components/ErrorPage'
 import './Navbar.css'
 import {
     BrowserRouter as Router,
@@ -81,6 +82,7 @@ const NavLayout = () => {
 const router = createBrowserRouter([ {
     element: <NavLayout />,
     children: [
+        { path: '/', element: <ErrorPage /> },
         { path: '/', element: <Home /> },
         { path: '/about', element: <About /> },
         { path: '/projects', element: <Projects /> },
