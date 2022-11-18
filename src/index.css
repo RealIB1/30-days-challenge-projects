@@ -27,6 +27,7 @@ a:hover {
 body {
   margin: 0;
   /* background-color: rgb(2, 47, 110); */
+  /* color: #fff; */
   overflow-x: hidden;
 }
 
@@ -56,9 +57,11 @@ button:focus-visible {
     background-color: rgba(255, 255, 255, 0.87);
     color: #242424;
   }
+  
   a:hover {
     color: #747bff;
   }
+  
   button {
     background-color: #f9f9f9;
   }

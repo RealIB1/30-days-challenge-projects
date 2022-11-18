@@ -1,4 +1,5 @@
 .main__projects {
+<<<<<<< HEAD
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* grid-template-rows: 1fr 1fr; */
@@ -8,17 +9,50 @@
   place-content: center;
   place-items: center;
   max-width: 75rem;
+=======
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    gap: 1rem 4rem;
+    grid-template-areas: "project1 project2" "project3 project4";
+    padding: 2rem;
+    place-content: center;
+    place-items: center;
+    max-width: 75rem;
+    color: #fff;
+>>>>>>> 35572aff2e51ef641901e080bf54e50fff55fb2c
 }
 
 .project {
   width: 100%;
 }
 .counter-title {
+<<<<<<< HEAD
   padding-top: 1rem;
   font-size: 3rem;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
+=======
+    padding-top: 1rem;
+    font-size: 3rem;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+  
+  .counter {
+      border-radius: 10px;
+    background-image: radial-gradient(
+      circle farthest-corner at 22.4% 21.7%,
+      rgba(4, 189, 228, 1) 0%,
+      rgba(2, 83, 185, 1) 100.2%
+    );
+    text-align: center;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    height: 20rem;
+  }
+>>>>>>> 35572aff2e51ef641901e080bf54e50fff55fb2c
 
 .counter {
   background-image: radial-gradient(
@@ -69,6 +103,7 @@ button:active {
   background-color: rgb(2, 114, 86);
 }
 
+<<<<<<< HEAD
 .minusOne {
   background-color: rgb(128, 4, 4);
   padding: 0.5rem 3rem;
@@ -77,6 +112,14 @@ button:active {
   border-radius: 5px;
   font-size: 1.5rem;
 }
+=======
+  .colors_main {
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: rgba(71, 1, 128, 0.477);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  }
+>>>>>>> 35572aff2e51ef641901e080bf54e50fff55fb2c
 
 .minusOne:hover {
   background-color: rgb(180, 3, 3);
@@ -90,11 +133,27 @@ button:active {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 .colors_main {
   padding: 1rem;
   background-color: rgba(71, 1, 128, 0.477);
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
+=======
+  .color {
+    height: 14.5rem;
+  }
+   
+  .form {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #52553C;
+  }
+>>>>>>> 35572aff2e51ef641901e080bf54e50fff55fb2c
 
 .colors {
   display: flex;
